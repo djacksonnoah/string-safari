@@ -29,7 +29,7 @@ namespace StringSafari
         public static bool HasAdultZebra(string str)
         {
             // TODO
-            return str.Contains("ZEBRA"); ;
+            return str.Contains("ZEBRA"); 
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace StringSafari
         public static bool HasAPride(string str)
         {
             // TODO
-            return false;
+            return str.Contains("lion");
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace StringSafari
         public static bool ThereWillBeBlood(string str)
         {
             // TODO
-            return false;
+            return str.Contains("LION");
         }
 
         /// <summary>
