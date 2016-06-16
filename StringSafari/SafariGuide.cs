@@ -54,7 +54,17 @@ namespace StringSafari
         public static bool HasADazzle(string str)
         {
             // TODO
-            return false;
+            int fisrtZebra = str.IndexOf("zebra");
+            int lastZebra = str.LastIndexOf("zebra");
+            int numberOfZebras = lastZebra - fisrtZebra;
+            if (numberOfZebras >= 2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>
@@ -67,7 +77,18 @@ namespace StringSafari
         public static bool HasAPride(string str)
         {
             // TODO
-            return str.Contains("lion");
+            str = str.ToLower();
+            int fisrtLion = str.IndexOf("lion");
+            int lastLion = str.LastIndexOf("lion");
+            int numberOfLions = lastLion - fisrtLion;
+            if (numberOfLions >= 2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>
@@ -79,7 +100,15 @@ namespace StringSafari
         public static bool ThereWillBeBlood(string str)
         {
             // TODO
-            return str.Contains("LION");
+            if (HasAPride(str) && !HasADazzle(str))
+            {
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>
